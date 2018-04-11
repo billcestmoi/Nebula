@@ -5,12 +5,16 @@ package com.ecvictor.testngNebula;
  */
 
 
+import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.*;
 
 import static org.testng.Assert.assertEquals;
@@ -32,13 +36,24 @@ public class tokensaleNebulaAiChineseTest {
         else System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
 
         ChromeOptions chromeOptions = new ChromeOptions();
+        /**
+         * for maximize
+         */
         //chromeOptions.addArguments("--kiosk");
+
+        /**
+         * Dimension only for Jenkins
+         */
         Dimension d = new Dimension(1382, 744);
 
         driver = new ChromeDriver(chromeOptions);
 
         baseUrl = "https://tokensale.nebula-ai.network/";
+        /**
+         * Dimension only for Jenkins
+         */
         driver.manage().window().setSize(d);
+
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
@@ -55,10 +70,39 @@ public class tokensaleNebulaAiChineseTest {
 //        testTokenSaleCN_wallet();
     }
 
+
+    /**
+     * Example of mouseover
+     */
 //    @Test
-//    public void testTokenSaleCN_home() throws Exception {
-//        // To test homepage
-//        //test whitepaper
+//    public void temp1() throws Exception {
+//        driver.get("https://nebula-ai.com/");
+//
+//        WebElement settings = driver.findElement(By.xpath("//A[@class='translate-menu-language aLink'][text()='Language']"));
+//        Actions action = new Actions(driver);
+//        Thread.sleep(500);
+//        action.moveToElement(settings).build().perform();
+//        Thread.sleep(5000);
+//        driver.findElement(By.xpath("(//A[text()='繁体 '])[1]")).click();
+//        Thread.sleep(5000);
+//    }
+    @Test
+    public void testMouseover() throws Exception {
+        driver.get("https://tokensale.nebula-ai.network/#home");
+        //Thread.sleep(5000);
+        WebElement settings = driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[3]/div/ul/a"));
+        Actions action = new Actions(driver);
+        Thread.sleep(500);
+        action.moveToElement(settings).build().perform();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//A[@href='https://nebula-ai.com/whitepaper/NBAI_whitepaper_CN.pdf'][text()='简体']")).click();
+        Thread.sleep(1000);
+    }
+
+    @Test
+    public void testTokenSaleCN_home() throws Exception {
+        // To test homepage
+        //test whitepaper
 //        driver.get("https://tokensale.nebula-ai.network/#home");
 //        driver.findElement(By.xpath("//*[@id=\"translate\"]")).click();
 //        driver.findElement(By.xpath("//*[@id=\"translate-home-link1\"]")).click();
@@ -66,42 +110,52 @@ public class tokensaleNebulaAiChineseTest {
 //            driver.switchTo().window(winHandle);
 //        }
 //        assertEquals("https://nebula-ai.com/whitepaper/NBAI_whitepaper_CN.pdf", driver.getCurrentUrl());
-//
-//
-//        //test telegram
-//        driver.get("https://tokensale.nebula-ai.network/#home");
-//        driver.findElement(By.xpath("//*[@id=\"translate\"]")).click();
-//        driver.findElement(By.xpath("/html/body/div[2]/div[2]/a[3]/img")).click();
-//
-//        for (String winHandle : driver.getWindowHandles()) {
-//            driver.switchTo().window(winHandle);
-//        }
-//        assertEquals("https://t.me/NebulaAICommunity", driver.getCurrentUrl());
-//        //test page twitter
-//        driver.get("https://tokensale.nebula-ai.network/#home");
-//        driver.findElement(By.xpath("//*[@id=\"translate\"]")).click();
-//        driver.findElement(By.xpath("/html/body/div[2]/div[2]/a[2]/img")).click();
-//
-//        for (String winHandle : driver.getWindowHandles()) {
-//            driver.switchTo().window(winHandle);
-//        }
-//        assertEquals("https://twitter.com/Nebula_AI", driver.getCurrentUrl());
-//
-//        //test page github
-//        driver.get("https://tokensale.nebula-ai.network/#home");
-//        driver.findElement(By.xpath("//*[@id=\"translate\"]")).click();
-//        driver.findElement(By.xpath("/html/body/div[2]/div[2]/a[1]/img")).click();
-//
-//        for (String winHandle : driver.getWindowHandles()) {
-//            driver.switchTo().window(winHandle);
-//        }
-//        assertEquals("https://github.com/nebulaai", driver.getCurrentUrl());
-//        System.out.println("homeTest finish");
-//
-//    }
 
 
-    //
+        //test telegram
+        driver.get("https://tokensale.nebula-ai.network/#home");
+        driver.findElement(By.xpath("//*[@id=\"translate\"]")).click();
+        driver.findElement(By.xpath("//IMG[@src='ressources/images/984222312.jpg']")).click();
+
+        for (String winHandle : driver.getWindowHandles()) {
+            driver.switchTo().window(winHandle);
+        }
+        assertEquals("https://t.me/NebulaAICommunity", driver.getCurrentUrl());
+
+        //test page twitter
+        driver.get("https://tokensale.nebula-ai.network/#home");
+        driver.findElement(By.xpath("//*[@id=\"translate\"]")).click();
+        driver.findElement(By.xpath("//IMG[@src='ressources/images/Twitter_Logo_White_On_Image.png']")).click();
+
+        for (String winHandle : driver.getWindowHandles()) {
+            driver.switchTo().window(winHandle);
+        }
+        assertEquals("https://twitter.com/Nebula_AI", driver.getCurrentUrl());
+
+        //test page github
+        driver.get("https://tokensale.nebula-ai.network/#home");
+        driver.findElement(By.xpath("//*[@id=\"translate\"]")).click();
+        driver.findElement(By.xpath("//IMG[@src='ressources/images/1883639.png']")).click();
+
+        for (String winHandle : driver.getWindowHandles()) {
+            driver.switchTo().window(winHandle);
+        }
+        assertEquals("https://github.com/nebulaai", driver.getCurrentUrl());
+        System.out.println("homeTest finish");
+        //test page facebook
+        driver.get("https://tokensale.nebula-ai.network/#home");
+        driver.findElement(By.xpath("//*[@id=\"translate\"]")).click();
+        driver.findElement(By.xpath("//IMG[@src='ressources/images/white-facebook-icon-png-like-us-on-facebook-to-stay-up-31.png']")).click();
+
+        for (String winHandle : driver.getWindowHandles()) {
+            driver.switchTo().window(winHandle);
+        }
+        assertEquals("https://www.facebook.com/NebulaAI/", driver.getCurrentUrl());
+        System.out.println("homeTest finish");
+
+    }
+
+
     @Test
     public void testTokenSaleCN_TopBar() throws Exception {
 

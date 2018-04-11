@@ -182,7 +182,7 @@ public class tokensaleNebulaAiChineseTest {
 //        driver.findElement(By.xpath("/html/body/div[1]/ul/li[6]/a")).click();
 //        Thread.sleep(1000);
 //        assertEquals("ICO 计划", driver.findElement(By.xpath("//*[@id=\"translate-token-distribution-title\"]")).getText());
-        driver.findElement(By.xpath("/html/body/div[1]/ul/li[7]/a")).click();
+        driver.findElement(By.cssSelector("#nav-team > a:nth-child(1)")).click();
         Thread.sleep(1000);
         assertEquals("我们的团队", driver.findElement(By.xpath("//*[@id=\"translate-team-title\"]")).getText());
         driver.findElement(By.xpath("/html/body/div[1]/ul/li[8]/a")).click();

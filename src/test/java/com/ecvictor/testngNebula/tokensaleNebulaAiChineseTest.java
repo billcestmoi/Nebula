@@ -2,15 +2,17 @@ package com.ecvictor.testngNebula;
 /**
  * Created by caoc on 2/10/17.
  * Copyright (c) 2015 Service ECVictor Inc. All rights reserved.
-*/
+ */
 
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.*;
+
 import static org.testng.Assert.assertEquals;
 
 import java.util.concurrent.TimeUnit;
@@ -30,12 +32,13 @@ public class tokensaleNebulaAiChineseTest {
         else System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
 
         ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--kiosk");
+        //chromeOptions.addArguments("--kiosk");
+        Dimension d = new Dimension(1382, 744);
 
         driver = new ChromeDriver(chromeOptions);
 
         baseUrl = "https://tokensale.nebula-ai.network/";
-
+        driver.manage().window().setSize(d);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
@@ -98,8 +101,7 @@ public class tokensaleNebulaAiChineseTest {
 //    }
 
 
-
-//
+    //
     @Test
     public void testTokenSaleCN_TopBar() throws Exception {
 
@@ -199,7 +201,6 @@ public class tokensaleNebulaAiChineseTest {
 //        assertEquals("常问问题", driver.findElement(By.xpath("//*[@id=\"translate-faq-title\"]")).getText());
         System.out.println("The rest test finish");
     }
-
 
 
     @AfterMethod

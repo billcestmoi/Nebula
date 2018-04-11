@@ -170,37 +170,37 @@ public class tokensaleNebulaAiChineseTest {
 
         System.out.println("Top Bar Test Finish");
     }
-//
-//    @Test
-//    public void rest() throws Exception {
-//        driver.get(baseUrl);
-//        driver.findElement(By.xpath("//*[@id=\"translate\"]")).click();
-//        Thread.sleep(500);
-//        driver.get("https://tokensale.nebula-ai.network/#roadmap");
-//        Thread.sleep(1000);
-//        assertEquals("路线图", driver.findElement(By.xpath("//*[@id=\"translate-roadmap-title\"]")).getText());
-//        driver.findElement(By.xpath("/html/body/div[1]/ul/li[6]/a")).click();
-////        driver.findElement(By.Xpath=("//*[@div@href='#token-distribution']")).click();
-//
-//        Thread.sleep(1000);
-//        assertEquals("ICO 计划", driver.findElement(By.xpath("//*[@id=\"translate-token-distribution-title\"]")).getText());
-//        driver.findElement(By.xpath("/html/body/div[1]/ul/li[7]/a")).click();
-//        Thread.sleep(1000);
-//        assertEquals("我们的团队", driver.findElement(By.xpath("//*[@id=\"translate-team-title\"]")).getText());
-//        driver.findElement(By.xpath("/html/body/div[1]/ul/li[8]/a")).click();
-//        Thread.sleep(1000);
-//        assertEquals("区块链专家", driver.findElement(By.xpath("/html/body/div[9]/div/div[2]/div/div[1]/div[2]/p/span")).getText());
-//        driver.findElement(By.xpath("/html/body/div[1]/ul/li[9]/a")).click();
-//        Thread.sleep(1000);
-//        assertEquals("合作伙伴", driver.findElement(By.xpath("//*[@id=\"translate-partners-title\"]")).getText());
-//        driver.findElement(By.xpath("/html/body/div[1]/ul/li[10]/a")).click();
-//        Thread.sleep(1000);
-//        assertEquals("战略投资者", driver.findElement(By.xpath("//*[@id=\"translate-investors-title\"]")).getText());
-//        driver.findElement(By.xpath("/html/body/div[1]/ul/li[11]/a")).click();
-//        Thread.sleep(1000);
-//        assertEquals("常问问题", driver.findElement(By.xpath("//*[@id=\"translate-faq-title\"]")).getText());
-//        System.out.println("The rest test finish");
-//    }
+
+    @Test
+    public void rest() throws Exception {
+        driver.get(baseUrl);
+        driver.findElement(By.xpath("//*[@id=\"translate\"]")).click();
+        Thread.sleep(500);
+        driver.get("https://tokensale.nebula-ai.network/#roadmap");
+        Thread.sleep(1000);
+        assertEquals("路线图", driver.findElement(By.xpath("//*[@id=\"translate-roadmap-title\"]")).getText());
+        driver.findElement(By.xpath("/html/body/div[1]/ul/li[6]/a")).click();
+//        driver.findElement(By.Xpath=("//*[@div@href='#token-distribution']")).click();
+
+        Thread.sleep(1000);
+        assertEquals("ICO 计划", driver.findElement(By.xpath("//*[@id=\"translate-token-distribution-title\"]")).getText());
+        driver.findElement(By.xpath("/html/body/div[1]/ul/li[7]/a")).click();
+        Thread.sleep(1000);
+        assertEquals("我们的团队", driver.findElement(By.xpath("//*[@id=\"translate-team-title\"]")).getText());
+        driver.findElement(By.xpath("/html/body/div[1]/ul/li[8]/a")).click();
+        Thread.sleep(1000);
+        assertEquals("区块链专家", driver.findElement(By.xpath("/html/body/div[9]/div/div[2]/div/div[1]/div[2]/p/span")).getText());
+        driver.findElement(By.xpath("/html/body/div[1]/ul/li[9]/a")).click();
+        Thread.sleep(1000);
+        assertEquals("合作伙伴", driver.findElement(By.xpath("//*[@id=\"translate-partners-title\"]")).getText());
+        driver.findElement(By.xpath("/html/body/div[1]/ul/li[10]/a")).click();
+        Thread.sleep(1000);
+        assertEquals("战略投资者", driver.findElement(By.xpath("//*[@id=\"translate-investors-title\"]")).getText());
+        driver.findElement(By.xpath("/html/body/div[1]/ul/li[11]/a")).click();
+        Thread.sleep(1000);
+        assertEquals("常问问题", driver.findElement(By.xpath("//*[@id=\"translate-faq-title\"]")).getText());
+        System.out.println("The rest test finish");
+    }
 
 
 

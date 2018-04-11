@@ -185,18 +185,18 @@ public class tokensaleNebulaAiChineseTest {
         driver.findElement(By.cssSelector("#nav-team > a:nth-child(1)")).click();
         Thread.sleep(1000);
         assertEquals("我们的团队", driver.findElement(By.xpath("//*[@id=\"translate-team-title\"]")).getText());
-        driver.findElement(By.xpath("/html/body/div[1]/ul/li[8]/a")).click();
-        Thread.sleep(1000);
-        assertEquals("区块链专家", driver.findElement(By.xpath("/html/body/div[9]/div/div[2]/div/div[1]/div[2]/p/span")).getText());
-        driver.findElement(By.xpath("/html/body/div[1]/ul/li[9]/a")).click();
-        Thread.sleep(1000);
-        assertEquals("合作伙伴", driver.findElement(By.xpath("//*[@id=\"translate-partners-title\"]")).getText());
-        driver.findElement(By.xpath("/html/body/div[1]/ul/li[10]/a")).click();
-        Thread.sleep(1000);
-        assertEquals("战略投资者", driver.findElement(By.xpath("//*[@id=\"translate-investors-title\"]")).getText());
-        driver.findElement(By.xpath("/html/body/div[1]/ul/li[11]/a")).click();
-        Thread.sleep(1000);
-        assertEquals("常问问题", driver.findElement(By.xpath("//*[@id=\"translate-faq-title\"]")).getText());
+//        driver.findElement(By.xpath("/html/body/div[1]/ul/li[8]/a")).click();
+//        Thread.sleep(1000);
+//        assertEquals("区块链专家", driver.findElement(By.xpath("/html/body/div[9]/div/div[2]/div/div[1]/div[2]/p/span")).getText());
+//        driver.findElement(By.xpath("/html/body/div[1]/ul/li[9]/a")).click();
+//        Thread.sleep(1000);
+//        assertEquals("合作伙伴", driver.findElement(By.xpath("//*[@id=\"translate-partners-title\"]")).getText());
+//        driver.findElement(By.xpath("/html/body/div[1]/ul/li[10]/a")).click();
+//        Thread.sleep(1000);
+//        assertEquals("战略投资者", driver.findElement(By.xpath("//*[@id=\"translate-investors-title\"]")).getText());
+//        driver.findElement(By.xpath("/html/body/div[1]/ul/li[11]/a")).click();
+//        Thread.sleep(1000);
+//        assertEquals("常问问题", driver.findElement(By.xpath("//*[@id=\"translate-faq-title\"]")).getText());
         System.out.println("The rest test finish");
     }
 

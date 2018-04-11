@@ -52,50 +52,50 @@ public class tokensaleNebulaAiChineseTest {
 //        testTokenSaleCN_wallet();
     }
 
-    @Test
-    public void testTokenSaleCN_home() throws Exception {
-        // To test homepage
-        //test whitepaper
-        driver.get("https://tokensale.nebula-ai.network/#home");
-        driver.findElement(By.xpath("//*[@id=\"translate\"]")).click();
-        driver.findElement(By.xpath("//*[@id=\"translate-home-link1\"]")).click();
-        for (String winHandle : driver.getWindowHandles()) {
-            driver.switchTo().window(winHandle);
-        }
-        assertEquals("https://nebula-ai.com/whitepaper/NBAI_whitepaper_CN.pdf", driver.getCurrentUrl());
-
-
-        //test telegram
-        driver.get("https://tokensale.nebula-ai.network/#home");
-        driver.findElement(By.xpath("//*[@id=\"translate\"]")).click();
-        driver.findElement(By.xpath("/html/body/div[2]/div[2]/a[3]/img")).click();
-
-        for (String winHandle : driver.getWindowHandles()) {
-            driver.switchTo().window(winHandle);
-        }
-        assertEquals("https://t.me/NebulaAICommunity", driver.getCurrentUrl());
-        //test page twitter
-        driver.get("https://tokensale.nebula-ai.network/#home");
-        driver.findElement(By.xpath("//*[@id=\"translate\"]")).click();
-        driver.findElement(By.xpath("/html/body/div[2]/div[2]/a[2]/img")).click();
-
-        for (String winHandle : driver.getWindowHandles()) {
-            driver.switchTo().window(winHandle);
-        }
-        assertEquals("https://twitter.com/Nebula_AI", driver.getCurrentUrl());
-
-        //test page github
-        driver.get("https://tokensale.nebula-ai.network/#home");
-        driver.findElement(By.xpath("//*[@id=\"translate\"]")).click();
-        driver.findElement(By.xpath("/html/body/div[2]/div[2]/a[1]/img")).click();
-
-        for (String winHandle : driver.getWindowHandles()) {
-            driver.switchTo().window(winHandle);
-        }
-        assertEquals("https://github.com/nebulaai", driver.getCurrentUrl());
-        System.out.println("homeTest finish");
-
-    }
+//    @Test
+//    public void testTokenSaleCN_home() throws Exception {
+//        // To test homepage
+//        //test whitepaper
+//        driver.get("https://tokensale.nebula-ai.network/#home");
+//        driver.findElement(By.xpath("//*[@id=\"translate\"]")).click();
+//        driver.findElement(By.xpath("//*[@id=\"translate-home-link1\"]")).click();
+//        for (String winHandle : driver.getWindowHandles()) {
+//            driver.switchTo().window(winHandle);
+//        }
+//        assertEquals("https://nebula-ai.com/whitepaper/NBAI_whitepaper_CN.pdf", driver.getCurrentUrl());
+//
+//
+//        //test telegram
+//        driver.get("https://tokensale.nebula-ai.network/#home");
+//        driver.findElement(By.xpath("//*[@id=\"translate\"]")).click();
+//        driver.findElement(By.xpath("/html/body/div[2]/div[2]/a[3]/img")).click();
+//
+//        for (String winHandle : driver.getWindowHandles()) {
+//            driver.switchTo().window(winHandle);
+//        }
+//        assertEquals("https://t.me/NebulaAICommunity", driver.getCurrentUrl());
+//        //test page twitter
+//        driver.get("https://tokensale.nebula-ai.network/#home");
+//        driver.findElement(By.xpath("//*[@id=\"translate\"]")).click();
+//        driver.findElement(By.xpath("/html/body/div[2]/div[2]/a[2]/img")).click();
+//
+//        for (String winHandle : driver.getWindowHandles()) {
+//            driver.switchTo().window(winHandle);
+//        }
+//        assertEquals("https://twitter.com/Nebula_AI", driver.getCurrentUrl());
+//
+//        //test page github
+//        driver.get("https://tokensale.nebula-ai.network/#home");
+//        driver.findElement(By.xpath("//*[@id=\"translate\"]")).click();
+//        driver.findElement(By.xpath("/html/body/div[2]/div[2]/a[1]/img")).click();
+//
+//        for (String winHandle : driver.getWindowHandles()) {
+//            driver.switchTo().window(winHandle);
+//        }
+//        assertEquals("https://github.com/nebulaai", driver.getCurrentUrl());
+//        System.out.println("homeTest finish");
+//
+//    }
 
 
 

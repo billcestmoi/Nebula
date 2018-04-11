@@ -86,7 +86,8 @@ public class tokensaleNebulaAiChineseTest {
 //        driver.findElement(By.xpath("(//A[text()='繁体 '])[1]")).click();
 //        Thread.sleep(5000);
 //    }
-    @Test
+
+   /* @Test
     public void testMouseover() throws Exception {
         driver.get("https://tokensale.nebula-ai.network/#home");
         //Thread.sleep(5000);
@@ -97,7 +98,7 @@ public class tokensaleNebulaAiChineseTest {
         Thread.sleep(1000);
         driver.findElement(By.xpath("//A[@href='https://nebula-ai.com/whitepaper/NBAI_whitepaper_CN.pdf'][text()='简体']")).click();
         Thread.sleep(1000);
-    }
+    }*/
 
     @Test
     public void testTokenSaleCN_home() throws Exception {

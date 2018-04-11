@@ -9,15 +9,15 @@ public class Control {
         chineseTest.setUp();
         chineseTest.testTokenSaleCN_wallet();
         chineseTest.testDown();
-        chineseTest.setUp();
-        chineseTest.testTokenSaleCN_TopBar();
-        chineseTest.testDown();
-        chineseTest.setUp();
-        chineseTest.testTokenSaleCN_home();
-        chineseTest.testDown();
-        chineseTest.setUp();
-        chineseTest.rest();
-        chineseTest.testDown();
+//        chineseTest.setUp();
+//        chineseTest.testTokenSaleCN_TopBar();
+//        chineseTest.testDown();
+//        chineseTest.setUp();
+//        chineseTest.testTokenSaleCN_home();
+//        chineseTest.testDown();
+//        chineseTest.setUp();
+//        chineseTest.rest();
+//        chineseTest.testDown();
         System.out.println("Test finish");
     }
 }

@@ -177,9 +177,11 @@ public class tokensaleNebulaAiChineseTest {
         driver.findElement(By.xpath("//*[@id=\"translate\"]")).click();
         Thread.sleep(500);
         driver.get("https://tokensale.nebula-ai.network/#roadmap");
-        Thread.sleep(500);
+        Thread.sleep(1000);
         assertEquals("路线图", driver.findElement(By.xpath("//*[@id=\"translate-roadmap-title\"]")).getText());
         driver.findElement(By.xpath("/html/body/div[1]/ul/li[6]/a")).click();
+//        driver.findElement(By.Xpath=("//*[@div@href='#token-distribution']")).click();
+
         Thread.sleep(1000);
         assertEquals("ICO 计划", driver.findElement(By.xpath("//*[@id=\"translate-token-distribution-title\"]")).getText());
         driver.findElement(By.xpath("/html/body/div[1]/ul/li[7]/a")).click();

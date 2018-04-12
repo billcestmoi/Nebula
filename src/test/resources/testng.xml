@@ -4,7 +4,7 @@
 <suite name="SuiteTokenSales">
     <test name="testeTokenSalesDetail">
         <classes>
-            <class name="com.ecvictor.testngNebula.Control"/>
+            <class name="com.ecvictor.testngNebula.tokensaleNebulaAiEnTest"/>
             <class name="com.ecvictor.testngNebula.tokensaleNebulaAiChineseTest"/>
         </classes>
     </test>

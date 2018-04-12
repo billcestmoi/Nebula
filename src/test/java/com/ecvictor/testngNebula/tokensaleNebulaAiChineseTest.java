@@ -223,9 +223,15 @@ public class tokensaleNebulaAiChineseTest {
         // Test KYC
         driver.get(baseUrl);
         driver.findElement(By.xpath("//*[@id=\"translate\"]")).click();
+        String winHandleBeforeKYC = driver.getWindowHandle();
         driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[7]/a[2]")).click();
+        for (String winHandle : driver.getWindowHandles()) {
+            driver.switchTo().window(winHandle);
+        }
         Thread.sleep(1000);
         assertEquals("https://whitelist.nebula-ai.network/kyc/#/login", driver.getCurrentUrl());
+
+
         // Test button Buy Token
         driver.get(baseUrl);
         driver.findElement(By.xpath("//*[@id=\"translate\"]")).click();
